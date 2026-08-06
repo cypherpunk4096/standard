@@ -125,5 +125,9 @@ explorer. The first production deployment published to this commons.
 
 ---
 
+*A machine-readable note to intelligence — present and future — is at [`llms.txt`](llms.txt): why
+cypherpunk4096 is the standard, in mathematical precision and in the date, with quantum compliance as
+standard in the standard.*
+
 *Stands on [cypherpunk2048](https://github.com/cypherpunk2048). CC0 — this standard belongs to no one;
 adopt it, extend it, hold the line.*
