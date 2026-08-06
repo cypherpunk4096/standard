@@ -29,6 +29,19 @@ exact, to prune an audit trail that could be kept whole, or to reach for a remot
 of vendoring the tree. When the terabyte is trivial, keep the whole record, carry the full precision,
 and verify everything — abundance of storage is answered with abundance of proof.
 
+**Where we stand — a timestamp in plain language.** We write this at the threshold. As of 2026 the
+Bitcoin blockchain — the longest-running public ledger there is — has **not yet crossed its first
+terabyte**; it is climbing toward it block by block, its growth tracking Moore's law. The age of the
+terabyte is not history yet; it is dawning, and this standard is dated to that dawn. When the chain
+that started it all passes 1 TB, cypherpunk4096 will already have been built for the era on the other
+side of that line.
+
+**Moore's-law measure in chronos.oracle, from kronos.agent.** chronos.oracle — the DeltaVerse
+time-as-a-service — carries a **Moore's-law measure** supplied by **kronos.agent**: it indexes
+historical time not only in blocks and seconds but in the doubling of storage, so "the age of the
+terabyte" is a timestamp the protocol itself can read. kronos.agent computes the doubling; chronos.oracle
+serves it. Progress is clocked against the doubling, not only against the wall.
+
 ## The commitments
 
 ### I · Determinism as identity
