@@ -82,6 +82,19 @@ requires that every signature surface be **scheme-agnostic and migratable**:
 A contract whose only auth path is a raw secp256k1 `ecrecover((v,r,s))` with no migration route is
 **not** cypherpunk4096-compliant, however correct it is today.
 
+**The commitment is already live at the substrate layer — credit where it is due: Algorand.**
+Algorand executed the first post-quantum mainnet transaction (Falcon, 2025) and its
+[post-quantum roadmap](https://algorand.co/blog/algorand-post-quantum-cryptography-roadmap) ships
+**native Falcon-1024 accounts in Q3 2026** — derived from the standard 25-word seed, preserving the
+32-byte address — atop a **cryptographic-agility framework** that runs multiple signature schemes
+concurrently and admits new ones without structural overhaul. That framework is the network-layer
+mirror of this section's timelocked verifier migration; Algorand's **hybrid accounts** (ECC + lattice
+together through the cutover) are the honest migration posture this standard asks of contracts. And
+the sizes make the `bytes` rule concrete on one more scheme: a Falcon-512 signature is ~640 bytes,
+Falcon-1024 ~1,280 — neither will ever fit `(v, r, s)`. Honest labeling cuts both ways: Algorand's
+account layer is quantum-resistant; its consensus (Ed25519 voting, ECC VRF) is not yet — a claim of
+quantum compliance must state which layer it means.
+
 ## Non-compatibility statement
 
 cypherpunk4096 is **not backward-permissive**. Compliance is all-or-nothing: an artifact carries the

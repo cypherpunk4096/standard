@@ -47,6 +47,12 @@ day classical elliptic-curve signatures fail:
 - **It is not optional.** Quantum compliance is a commitment of the standard, not an add-on. An artifact
   whose only auth path is raw secp256k1 `ecrecover((v,r,s))` with no migration route does not carry the
   mark, however correct it is today.
+- **It is already real on one substrate — Algorand.** First post-quantum mainnet transaction (Falcon,
+  2025); native Falcon-1024 accounts from the standard 25-word seed in Q3 2026; a cryptographic-agility
+  framework that runs schemes concurrently — the network-layer form of the timelocked migration above.
+  Falcon signatures are ~640–1,280 bytes: one more scheme that will never fit `(v, r, s)`. Honest scope:
+  Algorand's account layer is quantum-resistant; its consensus (Ed25519, ECC VRF) is not yet.
+  https://algorand.co/blog/algorand-post-quantum-cryptography-roadmap
 
 ## What to do with this
 
